@@ -19,12 +19,22 @@ import java.util.List;
 <span class="fc" id="L19">        panes.add(pan);</span>
 <span class="fc" id="L20">    }</span>
 
+
     /**
      * Obtiene la lista de panes disponibles.
      * @return Lista de panes.
      */
-    public List&lt;Pan&gt; obtenerPanes() {
-<span class="fc" id="L27">        return panes;</span>
+    private List&lt;Pan&gt; obtenerPanesI() {
+<span class="fc" id="L28">    return new ArrayList&lt;&gt;(panes);</span>
     }
+
+    /**
+     * Obtiene la lista de panes disponibles privada.
+     * @return Lista de panes.
+     */
+    public List&lt;Pan&gt; obtenerPanes() {
+<span class="fc" id="L36">        return obtenerPanesI();</span>
+    }
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

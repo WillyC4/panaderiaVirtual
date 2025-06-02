@@ -19,11 +19,21 @@ public final class Panaderia {
         panes.add(pan);
     }
 
+
     /**
      * Obtiene la lista de panes disponibles.
      * @return Lista de panes.
      */
-    public List<Pan> obtenerPanes() {
-        return panes;
+    private List<Pan> obtenerPanesI() {
+    return new ArrayList<>(panes);
     }
+
+    /**
+     * Obtiene la lista de panes disponibles privada.
+     * @return Lista de panes.
+     */
+    public List<Pan> obtenerPanes() {
+        return obtenerPanesI();
+    }
+
 }
