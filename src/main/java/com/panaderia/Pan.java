@@ -18,14 +18,14 @@ public final class Pan {
      * Constructor de la clase Pan.
      * @param nombreParam Nombre del pan.
      * @param precioParam Precio del pan.
-     * @param calidadParam Calidad del pan.
+     * @param calidadPan Calidad del pan.
      */
     public Pan(final String nombreParam,
             final double precioParam,
-            final int calidadParam) {
+            final int calidadPan) {
         this.nombre = nombreParam;
         this.precio = precioParam;
-        this.calidad = calidadParam;
+        this.calidad = calidadPan;
     }
 
     /**
