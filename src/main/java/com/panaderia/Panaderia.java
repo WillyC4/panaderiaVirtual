@@ -1,39 +1,57 @@
 package com.panaderia;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Administra los panes disponibles en la panadería.
+ * Representa un pan en la panadería.
  */
-public final class Panaderia {
+public final class Pan {
 
-    /** Lista de panes disponibles. */
-    private final List<Pan> panes = new ArrayList<>();
+    /** Nombre del pan. */
+    private final String nombre;
 
-    /**
-     * Agrega un pan a la panadería.
-     * @param pan Pan a agregar.
-     */
-    public void agregarPan(final Pan pan) {
-        panes.add(pan);
-    }
+    /** Precio del pan. */
+    private final double precio;
 
+    /** Calidad del pan. */
+    private final int calidad;
 
     /**
-     * Obtiene la lista de panes disponibles.
-     * @return Lista de panes.
+     * Constructor de la clase Pan.
+     * @param nombre Nombre del pan.
+     * @param precio Precio del pan.
+     * @param calidad Calidad del pan.
      */
-    private List<Pan> obtenerPanesI() {
-    return new ArrayList<>(panes);
+    public Pan(final String nombre, final double precio, final int calidad) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.calidad = calidad;
     }
 
     /**
-     * Obtiene la lista de panes disponibles privada.
-     * @return Lista de panes.
+     * Obtiene el nombre del pan.
+     * @return Nombre del pan.
      */
-    public List<Pan> obtenerPanes() {
-        return obtenerPanesI();
+    public String getNombre() {
+        return nombre;
     }
 
+    /**
+     * Obtiene el precio del pan.
+     * @return Precio del pan.
+     */
+    public double getPrecio() {
+        return precio;
+    }
+
+    /**
+     * Obtiene la calidad del pan.
+     * @return Calidad del pan.
+     */
+    public int getCalidad() {
+        return calidad;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " - Precio: $" + precio + " - Calidad: " + calidad;
+    }
 }
